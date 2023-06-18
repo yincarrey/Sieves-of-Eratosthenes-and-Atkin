@@ -2,7 +2,7 @@
 
 std::vector<bool> cribaAtkin(int limite) {
   std::vector<bool> esPrimo(limite + 1, false); // Inicializar todos los números como compuestos
-  esPrimo[2] = esPrimo[3] = true;
+  esPrimo[2] = esPrimo[3] = true; // Definir valores iniciales como primos
 
   // Pasos de la Criba de Atkin
   int raizLimite = static_cast<int>(std::sqrt(limite));
@@ -118,4 +118,15 @@ void mostrarPrimos(const std::vector<int>& primos) {
     << "numeros encontrados: " 
     << primos.size() 
     << std::endl;
+}
+
+bool verificarEntero(int valor) {
+
+  // Verificar si el valor es mayor que 0
+  if (valor >= 2) {
+    return true;
+  }
+
+  std::cout << "No existen numeros primos" << std::endl;
+  return false;
 }
