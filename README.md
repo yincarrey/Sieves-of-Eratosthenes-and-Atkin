@@ -52,4 +52,4 @@ El algoritmo de la Criba de Eratóstenes sigue los siguientes pasos:
 6. Avanzar al siguiente número no marcado en la lista y repetir el paso anterior.
 
 Al finalizar el proceso, los números que queden en la lista serán los números primos encontrados. Si desea indagar mas sobre el tema se deja el siguiente enlace:
-[sieve of eratosthenes][https://cp-algorithms.com/algebra/sieve-of-eratosthenes.html]
+[sieve of eratosthenes](https://cp-algorithms.com/algebra/sieve-of-eratosthenes.html)
