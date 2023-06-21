@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.10)
+project(MyProject)
+
+# Encuentra OpenMP
+find_package(OpenMP REQUIRED)
+
+# Configura las opciones de compilación para OpenMP
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+
+# Configura la biblioteca
+add_library(my_library
+    headers/header.cpp
+    headers/header.h
+)
+
+target_include_directories(my_library PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/headers)
+
+# Configura el ejecutable
+add_executable(numerosPrimosParalelo
+    main.cpp
+)
+
+target_link_libraries(numerosPrimosParalelo PRIVATE my_library)
