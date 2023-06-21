@@ -39,3 +39,16 @@ conjuntos de datos, allanando el camino hacia futuros avances en el ámbito de l
 La Criba de Eratóstenes es un antiguo algoritmo que permite encontrar todos los números primos en un rango determinado de valores. Fue desarrollado por el matemático griego
 Eratóstenes de Cirene alrededor del siglo III a.C. Este algoritmo es eficiente para encontrar números primos hasta un límite predefinido y se basa en el principio de eliminar
 los múltiplos de cada número primo encontrado.
+
+#### Metodología
+
+El algoritmo de la Criba de Eratóstenes sigue los siguientes pasos:
+
+1. Crear una lista de números desde 2 hasta el valor máximo deseado.
+2. Inicializar una variable llamada "p" en 2, que será el primer número primo.
+3. Iterar sobre la lista de números y, para cada número, realizar lo siguiente:
+4. Si el número actual no ha sido marcado como múltiplo de otro número primo previamente encontrado, se considera como un número primo válido.
+5. Marcar todos los múltiplos del número actual como compuestos (no primos). Esto se logra eliminando los múltiplos del número actual de la lista.
+6. Avanzar al siguiente número no marcado en la lista y repetir el paso anterior.
+
+Al finalizar el proceso, los números que queden en la lista serán los números primos encontrados.
