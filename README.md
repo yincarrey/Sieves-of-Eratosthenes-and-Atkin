@@ -51,4 +51,5 @@ El algoritmo de la Criba de Eratóstenes sigue los siguientes pasos:
 5. Marcar todos los múltiplos del número actual como compuestos (no primos). Esto se logra eliminando los múltiplos del número actual de la lista.
 6. Avanzar al siguiente número no marcado en la lista y repetir el paso anterior.
 
-Al finalizar el proceso, los números que queden en la lista serán los números primos encontrados.
+Al finalizar el proceso, los números que queden en la lista serán los números primos encontrados. Si desea indagar mas sobre el tema se deja el siguiente enlace:
+[sieve of eratosthenes][https://cp-algorithms.com/algebra/sieve-of-eratosthenes.html]
