@@ -26,8 +26,8 @@ permitiendo seleccionar la opción más adecuada para la búsqueda de números p
 Con esta investigación detallada y rigurosa, se espera proporcionar un enfoque sólido y fundamentado para abordar el desafío de encontrar números primos en grandes
 conjuntos de datos, allanando el camino hacia futuros avances en el ámbito de la computación y las matemáticas.
 
-## Algoritmos para determinar números primos
+A través del análisis de la complejidad temporal, expresada mediante la notación Big O, se obtuvieron conclusiones sólidas sobre la eficiencia relativa de los algoritmos, 
+permitiendo seleccionar la opción más adecuada para la búsqueda de números primos en el contexto de la problemática planteada.
 
-A través del análisis de la complejidad temporal, expresada mediante la notación Big O, se obtuvieron conclusiones sólidas sobre la eficiencia relativa de los algoritmos, permitiendo seleccionar la opción más adecuada para la búsqueda de números primos en el contexto de la problemática planteada.
-
-Con esta investigación detallada y rigurosa, se espera proporcionar un enfoque sólido y fundamentado para abordar el desafío de encontrar números primos en grandes conjuntos de datos, allanando el camino hacia futuros avances en el ámbito de la computación y las matemáticas.
+Con esta investigación detallada y rigurosa, se espera proporcionar un enfoque sólido y fundamentado para abordar el desafío de encontrar números primos en grandes 
+conjuntos de datos, allanando el camino hacia futuros avances en el ámbito de la computación y las matemáticas.
