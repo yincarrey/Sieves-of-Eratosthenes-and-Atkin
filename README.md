@@ -69,3 +69,15 @@ En este caso particular, los números primos encontrados hasta 100 son: 2, 3, 5,
 ![Numeros primos con n = 100](images/primos.png)
 
 Sí se desea indagar mas sobre el tema puede optar por revisar [sieve of eratosthenes](https://cp-algorithms.com/algebra/sieve-of-eratosthenes.html).
+
+### Criba de Atkin
+
+La Criba de Atkin, propuesta por A. O. L. Atkin y Daniel J. Bernstein en 2004, es un algoritmo avanzado diseñado para encontrar números primos hasta un límite dado de manera 
+más eficiente que la Criba de Eratóstenes convencional. Esta técnica se basa en el [teorema de los residuos cuadráticos](http://enciclopedia.us.es/index.php/Resto_cuadr%C3%A1tico) y emplea operaciones matemáticas para determinar qué 
+números son primos y cuáles son compuestos.
+
+A diferencia de la Criba de Eratóstenes, que itera sobre todos los números y sus múltiplos, la Criba de Atkin se enfoca en encontrar patrones específicos relacionados con los 
+residuos cuadráticos. Se aplican tres pruebas de residuos cuadráticos: 4x^2 + y^2, 3x^2 + y^2 y 3x^2 - y^2. Estas pruebas se utilizan para marcar los números como primos o 
+compuestos, basándose en la congruencia de los valores resultantes con ciertos módulos.
+
+
