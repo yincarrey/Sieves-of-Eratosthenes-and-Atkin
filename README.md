@@ -65,6 +65,7 @@ Supongamos que queremos encontrar todos los números primos hasta el valor máxi
 
 Al finalizar el proceso, los números que queden en la lista serán los números primos encontrados.
 En este caso particular, los números primos encontrados hasta 100 son: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89 y 97.
+
 ![Numeros primos con n = 100](images/primos.png)
 
 Sí se desea indagar mas sobre el tema puede optar por revisar [sieve of eratosthenes](https://cp-algorithms.com/algebra/sieve-of-eratosthenes.html).
