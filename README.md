@@ -80,4 +80,32 @@ A diferencia de la Criba de Eratóstenes, que itera sobre todos los números y s
 residuos cuadráticos. Se aplican tres pruebas de residuos cuadráticos: 4x^2 + y^2, 3x^2 + y^2 y 3x^2 - y^2. Estas pruebas se utilizan para marcar los números como primos o 
 compuestos, basándose en la congruencia de los valores resultantes con ciertos módulos.
 
+#### Metodología
 
+La implementación de la Criba de Atkin se puede resumir en los siguientes pasos:
+
+1. Se crea un arreglo de tamaño n, donde n es el límite superior hasta el cual se desean encontrar los números primos. Inicialmente, todos los elementos del arreglo se marcan
+como compuestos.
+3. Se definen las tres pruebas de residuos cuadráticos: 4x^2 + y^2, 3x^2 + y^2 y 3x^2 - y^2. Estas pruebas se utilizan para determinar si un número es primo o compuesto.
+4. Se itera sobre los valores de x e y en un rango adecuado que cumpla con la ecuación x^2 + y^2 ≤ n.
+5. Para cada combinación de x e y, se calculan los valores de las pruebas de residuos cuadráticos.
+6. Si los valores resultantes cumplen con ciertas condiciones, se marca el número correspondiente en el arreglo como primo.
+
+#### Ejemplo
+
+Suponiendo que se tienen que encontrar los numeros primos con N = 200 utilizando la Criba de Atkin:
+
+1. Creamos un arreglo de tamaño 201, que incluye los números desde 0 hasta 200. Inicialmente, todos los elementos se marcan como compuestos.
+2. Definimos las tres pruebas de residuos cuadráticos: 4x^2 + y^2, 3x^2 + y^2 y 3x^2 - y^2.
+3. Comenzamos a iterar sobre los valores de x e y que cumplen con la condición x^2 + y^2 ≤ 200.
+   * Para x = 1, probamos con y = 1, 2, 3, ..., hasta el máximo valor que cumpla con la condición x^2 + y^2 ≤ 200.
+      * Para cada combinación de x e y, calculamos los valores de las pruebas de residuos cuadráticos.
+      * Si los valores resultantes cumplen con las condiciones requeridas, marcamos los números correspondientes en el arreglo como primos.
+4. Continuamos iterando sobre los demás valores de x, realizando el mismo proceso para cada combinación de x e y que cumpla con la condición x^2 + y^2 ≤ 200.
+
+Al finalizar el proceso de iteración, revisamos los elementos del arreglo. Los números marcados como primos son los números primos encontrados hasta el límite de 200.
+
+![Numeros primos con n = 100](images/primos200.png)
+
+En este ejemplo, los números primos encontrados mediante la Criba de Atkin con n = 200 son: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 
+83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197 y 199.
