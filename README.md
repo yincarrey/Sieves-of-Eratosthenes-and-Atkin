@@ -56,14 +56,15 @@ El algoritmo de la Criba de Eratóstenes sigue los siguientes pasos:
 Supongamos que queremos encontrar todos los números primos hasta el valor máximo de 100 utilizando la Criba de Eratóstenes. Los pasos serían los siguientes:
 
 1. Primero, creamos una lista de números del 2 al 100, ya que sabemos que 2 es el número primo más pequeño y queremos encontrar todos los números primos hasta 100.
-2. Comenzamos con el primer número de la lista, que es 2. Sabemos que 2 es primo, así que lo marcamos como tal y eliminamos todos sus múltiplos de la lista. En este caso, 
-eliminamos los números 4, 6, 8, 10, 12, ..., hasta 100, que son múltiplos de 2.
+2. Comenzamos con el primer número de la lista, que es 2. Sabemos que 2 es primo, así que lo marcamos como tal y eliminamos todos sus múltiplos de la lista. En este caso,
+   eliminamos los números 4, 6, 8, 10, 12, ..., hasta 100, que son múltiplos de 2.
 3. Pasamos al siguiente número no marcado en la lista, que es 3. Lo marcamos como primo y eliminamos todos sus múltiplos de la lista. En este caso, eliminamos los números
-6, 9, 12, 15, ..., hasta 99, que son múltiplos de 3.
+   6, 9, 12, 15, ..., hasta 99, que son múltiplos de 3.
 4. Continuamos este proceso para todos los números no marcados en la lista. Para cada número no marcado, lo marcamos como primo y eliminamos todos sus múltiplos de la lista.
 5. Repetimos los pasos 3 y 4 hasta que hayamos recorrido todos los números no marcados en la lista.
 
-Al finalizar el proceso, los números que queden en la lista serán los números primos encontrados. 
+Al finalizar el proceso, los números que queden en la lista serán los números primos encontrados.
 En este caso particular, los números primos encontrados hasta 100 son: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89 y 97.
+![Numeros primos con n = 100](images/primos.png)
 
 Sí se desea indagar mas sobre el tema puede optar por revisar [sieve of eratosthenes](https://cp-algorithms.com/algebra/sieve-of-eratosthenes.html).
