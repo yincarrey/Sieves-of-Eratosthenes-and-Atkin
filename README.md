@@ -2,7 +2,8 @@
 
 ## Descripción
 
-Este proyecto se centra en abordar la desafiante problemática de determinar los números primos en conjuntos de datos de gran magnitud. Para ello, se realizó una exhaustiva investigación que exploró diversas metodologías y algoritmos empleados en esta tarea.
+Este proyecto se centra en abordar la problemática de determinar los números primos en conjuntos de datos de gran magnitud. Para ello, se realizó una investigación que 
+exploró diversas metodologías y algoritmos empleados en esta tarea.
 
 Durante la fase de investigación, se llevó a cabo un análisis detallado de dos algoritmos fundamentales:
 
@@ -13,24 +14,12 @@ Estos algoritmos son ampliamente reconocidos en el ámbito de las matemáticas y
 dado.
 
 Además de profundizar en el aspecto teórico de los algoritmos, se procedió a su implementación práctica en el lenguaje de programación C++, haciendo uso de la biblioteca
-OpenMP. Esta elección estratégica permitió explorar el potencial de la programación multiproceso y paralela, con el objetivo de mejorar el rendimiento y agilizar el
-proceso de búsqueda de números primos en sistemas que disponen de múltiples núcleos de procesamiento.
-
-Durante la implementación, se abordaron diversas problemáticas relacionadas con el rendimiento y la posible sobrecarga del sistema al ejecutar los algoritmos en conjuntos
-de datos extensos. Se realizaron evaluaciones comparativas entre la Criba de Atkin y la Criba de Eratóstenes para determinar cuál de ellos ofrecía un mejor desempeño en
-diferentes escenarios.
+OpenMP. Esta elección permitió explorar el potencial de la programación paralela, con el objetivo de mejorar el rendimiento y agilizar el proceso de búsqueda de números
+primos en sistemas que disponen de múltiples núcleos de procesamiento.
 
 A través del análisis de la complejidad temporal, expresada mediante la notación Big O, se obtuvieron conclusiones sólidas sobre la eficiencia relativa de los algoritmos,
-permitiendo seleccionar la opción más adecuada para la búsqueda de números primos en el contexto de la problemática planteada.
-
-Con esta investigación detallada y rigurosa, se espera proporcionar un enfoque sólido y fundamentado para abordar el desafío de encontrar números primos en grandes
-conjuntos de datos, allanando el camino hacia futuros avances en el ámbito de la computación y las matemáticas.
-
-A través del análisis de la complejidad temporal, expresada mediante la notación Big O, se obtuvieron conclusiones sólidas sobre la eficiencia relativa de los algoritmos,
-permitiendo seleccionar la opción más adecuada para la búsqueda de números primos en el contexto de la problemática planteada.
-
-Con esta investigación detallada y rigurosa, se espera proporcionar un enfoque sólido y fundamentado para abordar el desafío de encontrar números primos en grandes
-conjuntos de datos, allanando el camino hacia futuros avances en el ámbito de la computación y las matemáticas.
+permitiendo seleccionar la opción más adecuada para la búsqueda de números primos en el contexto de la problemática planteada. Con esta investigación, se espera 
+proporcionar un enfoque sólido y fundamentado para abordar el desafío de encontrar números primos en grandes conjuntos de datos.
 
 ## Algoritmos para determinar números primos
 
@@ -141,8 +130,20 @@ gcc -fopenmp --version
 g++ -fopenmp --version
 ```
 
-En lo personal, recomiendo utilizar el MinGW minimalista de [sourceforge](https://sourceforge.net/projects/mingw/), que proporciona las librerias estandar incluyendo la de openmp 
+En lo personal, recomiendo utilizar el MinGW minimalista de [sourceforge](https://sourceforge.net/projects/mingw/) en Windows, que proporciona las librerias estandar incluyendo la de openmp 
 de una manera facil y eficaz.
+
+Por otro lado, para distribuciones de Linux basados en Debian como Ubuntu:
+
+Compilador:
+```bash
+sudo apt install mingw-w64
+```
+
+Libreria OpenMp (si es que no se incluye en la instalacion anterior).
+```bash
+sudo apt install libomp-dev
+```
 
 ### Criba de Eratóstenes
 
@@ -238,4 +239,93 @@ std::vector<bool> cribaAtkin(int limite) {
   // Devolver el vector que indica si cada número es primo o no
   return esPrimo;
 }
+```
+
+## Complejidad temporal Big O
+
+## Compilación y ejecución
+
+Respecto a la compilación y ejecución del programa se puede realizar de dos formas: 
+* Por comando de compilación manual
+* Mediante la utilización del archivo CMakeLists.txt proporcionado en el repositorio.
+
+### Compilacion manual
+
+Si se desea compilar el programa manualmente, se puede ejecutar el siguiente comando en la terminal, dependiendo del sistema operativo:
+
+* Linux
+
+Compilación:
+```bash
+g++ -fopenmp .\src\header\header.cpp .\src\header\header.h .\src\main.cpp -o main
+```
+
+Ejecución:
+```bash
+./main
+```
+
+* Windows
+
+Compilación:
+```bash
+g++ -fopenmp .\src\header\header.cpp .\src\header\header.h .\src\main.cpp -o main.exe
+```
+
+Ejecución:
+```bash
+.\main.exe
+```
+
+Cabe destacar que el nombre del ejecutable "main" es opcional y queda a criterio de cada uno.
+
+### Compilación mediante CMake
+
+En el repositorio se incluye un archivo CMakeLists.txt que facilita el proceso de compilación. Para utilizarlo, se pueden seguir los siguientes pasos:
+
+* Linux o Windows (con GitBash)
+1. En la terminal, crea un directorio llamado build (si no existe) en el directorio raíz del proyecto
+
+```bash
+mkdir build
+```
+
+2. Acceder al directorio build recién creado
+
+```bash
+cd build
+```
+
+3. Ejecutar el comando "cmake .." para generar los archivos de compilación correspondientes
+
+```bash
+cmake ..
+```
+
+4. Ejecutar el comando en Linux "make" o "mingw32-make" en Windows para compilar el proyecto. Esto creara un directorio "executable/" fuera de la carpeta "build/"
+
+* Linux
+  
+```bash
+make
+```
+
+* Windows
+  
+```bash
+mingw32-make
+```
+
+5. Por ultimo, ejecutar el ejecutable creado en el directorio "executable/" que se creo automaticamente
+
+* Linux
+
+```bash
+../executable/numerosPrimosParalelo
+```
+
+* Windows
+
+```bash
+..\executable\numerosPrimosParalelo.exe
 ```
