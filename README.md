@@ -115,10 +115,18 @@ En este ejemplo, los números primos encontrados mediante la Criba de Atkin con 
 A continuación, se realizará la implementación en C++ utilizando OpenMP delos algoritmos revisados anteriormente. Para ello, antes de comenzar con la implementación, es esencial
 verificar que se cumplan los requisitos mínimos. Asegúrate de tener en cuenta lo siguiente:
 
-Compilador compatible con OpenMP: Se debe de tener instalado un compilador compatible con OpenMP en tu sistema. Algunas opciones populares son GCC (GNU Compiler Collection), 
+*Compilador compatible con OpenMP*: Se debe de tener instalado un compilador compatible con OpenMP en tu sistema. Algunas opciones populares son GCC (GNU Compiler Collection), 
 Clang y Microsoft Visual C++. Si aún no tienes instalado un compilador, es necesario descargar e instalar uno antes de continuar.
 
- bash `gcc --version`
+Para confirmar esto puedes utilizar el siguiente comando en el terminal:
+
+```bash
+gcc --version
+```
+
+```bash
+g++ --version
+```
 
 Habilitar OpenMP: Verifica que OpenMP esté habilitado en tu compilador. Dependiendo del compilador que estés utilizando, esto puede requerir configuraciones adicionales. Por ejemplo, en el caso de GCC y g++, puedes habilitar OpenMP agregando la opción de compilación -fopenmp al momento de compilar.
 
