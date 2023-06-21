@@ -1,5 +1,5 @@
 #include "headers/header.h"
-#define LIMITE 500000000
+#define LIMITE 500000
 
 
 int main() {
