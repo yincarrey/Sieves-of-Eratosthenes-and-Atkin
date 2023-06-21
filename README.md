@@ -109,3 +109,17 @@ Al finalizar el proceso de iteración, revisamos los elementos del arreglo. Los 
 
 En este ejemplo, los números primos encontrados mediante la Criba de Atkin con n = 200 son: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 
 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197 y 199.
+
+## Implementación en C++ utilizando OpenMP
+
+A continuación, se realizará la implementación en C++ utilizando OpenMP delos algoritmos revisados anteriormente. Para ello, antes de comenzar con la implementación, es esencial
+verificar que se cumplan los requisitos mínimos. Asegúrate de tener en cuenta lo siguiente:
+
+Compilador compatible con OpenMP: Se debe de tener instalado un compilador compatible con OpenMP en tu sistema. Algunas opciones populares son GCC (GNU Compiler Collection), 
+Clang y Microsoft Visual C++. Si aún no tienes instalado un compilador, es necesario descargar e instalar uno antes de continuar.
+
+ bash `gcc --version`
+
+Habilitar OpenMP: Verifica que OpenMP esté habilitado en tu compilador. Dependiendo del compilador que estés utilizando, esto puede requerir configuraciones adicionales. Por ejemplo, en el caso de GCC y g++, puedes habilitar OpenMP agregando la opción de compilación -fopenmp al momento de compilar.
+
+Biblioteca OpenMP: Asegúrate de tener la biblioteca de OpenMP instalada en tu sistema. Esta biblioteca suele estar incluida con el compilador. Sin embargo, verifica que esté presente y actualizada antes de comenzar la implementación.
