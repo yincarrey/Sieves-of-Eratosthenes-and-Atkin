@@ -112,10 +112,10 @@ En este ejemplo, los números primos encontrados mediante la Criba de Atkin con 
 
 ## Implementación en C++ utilizando OpenMP
 
-A continuación, se realizará la implementación en C++ utilizando OpenMP delos algoritmos revisados anteriormente. Para ello, antes de comenzar con la implementación, es esencial
+A continuación, se realizará la implementación en C++ utilizando OpenMP de los algoritmos revisados anteriormente. Para ello, antes de comenzar con la implementación, es esencial
 verificar que se cumplan los requisitos mínimos. Asegúrate de tener en cuenta lo siguiente:
 
-*Compilador compatible con OpenMP*: Se debe de tener instalado un compilador compatible con OpenMP en tu sistema. Algunas opciones populares son GCC (GNU Compiler Collection), 
+**Compilador compatible con OpenMP**: Se debe de tener instalado un compilador compatible con OpenMP en tu sistema. Algunas opciones populares son GCC (GNU Compiler Collection), 
 Clang y Microsoft Visual C++. Si aún no tienes instalado un compilador, es necesario descargar e instalar uno antes de continuar.
 
 Para confirmar esto puedes utilizar el siguiente comando en el terminal:
@@ -128,6 +128,114 @@ gcc --version
 g++ --version
 ```
 
-Habilitar OpenMP: Verifica que OpenMP esté habilitado en tu compilador. Dependiendo del compilador que estés utilizando, esto puede requerir configuraciones adicionales. Por ejemplo, en el caso de GCC y g++, puedes habilitar OpenMP agregando la opción de compilación -fopenmp al momento de compilar.
+**Habilitar OpenMP**: Verifica que OpenMP esté habilitado en tu compilador. Dependiendo del compilador que estés utilizando, esto puede requerir configuraciones adicionales. 
+Por ejemplo, en el caso de GCC y g++, puedes habilitar OpenMP agregando la opción de compilación -fopenmp al momento de compilar.
 
-Biblioteca OpenMP: Asegúrate de tener la biblioteca de OpenMP instalada en tu sistema. Esta biblioteca suele estar incluida con el compilador. Sin embargo, verifica que esté presente y actualizada antes de comenzar la implementación.
+Para confirmar esto puedes utilizar el siguiente comando en el terminal:
+
+```bash
+gcc -fopenmp --version
+```
+
+```bash
+g++ -fopenmp --version
+```
+
+En lo personal, recomiendo utilizar el MinGW minimalista de [sourceforge](https://sourceforge.net/projects/mingw/), que proporciona las librerias estandar incluyendo la de openmp 
+de una manera facil y eficaz.
+
+### Criba de Eratóstenes
+
+```c++
+std::vector<bool> cribaDeEratostenes(int limite) {
+  // Crear un vector para almacenar si cada número es primo o no
+  std::vector<bool> esPrimo(limite + 1, true); // Inicializar todos los números como primos
+
+  // Calcular la raíz cuadrada del límite para determinar hasta qué número iterar
+  int sqrtLimite = static_cast<int>(std::sqrt(limite));
+
+  #pragma omp parallel
+  {
+    #pragma omp for
+    // Iterar sobre los números desde 2 hasta la raíz cuadrada del límite
+    for (int p = 2; p <= sqrtLimite; ++p) {
+      #pragma omp critical
+      {
+        // Si el número actual es primo
+        if (esPrimo[p]) {
+          // Marcar como compuestos todos los múltiplos del número actual
+          for (int i = p * p; i <= limite; i += p) {
+            esPrimo[i] = false;
+          }
+        }
+      }
+    }
+  }
+
+  // Devolver el vector que indica si cada número es primo o no
+  return esPrimo;
+}
+```
+
+### Criba de Atkin
+
+```c++
+std::vector<bool> cribaAtkin(int limite) {
+  std::vector<bool> esPrimo(limite + 1, false); // Inicializar todos los números como compuestos
+  esPrimo[2] = esPrimo[3] = true; // Definir valores iniciales como primos
+
+  // Pasos de la Criba de Atkin
+  int raizLimite = static_cast<int>(std::sqrt(limite));
+
+  #pragma omp parallel
+  {
+    #pragma omp for
+    // Iterar sobre los valores de x e y
+    for (int x = 1; x <= raizLimite; ++x) {
+      for (int y = 1; y <= raizLimite; ++y) {
+        int n = (4 * x * x) + (y * y);
+        if (n <= limite) {
+          // Verificar si el residuo cuadrático cumple con las condiciones para ser primo
+          if (n % 12 == 1 || n % 12 == 5) {
+            #pragma omp critical
+            esPrimo[n] = !esPrimo[n];
+          }
+        }
+
+        n = (3 * x * x) + (y * y);
+        if (n <= limite) {
+          // Verificar si el residuo cuadrático cumple con las condiciones para ser primo
+          if (n % 12 == 7) {
+            #pragma omp critical
+            esPrimo[n] = !esPrimo[n];
+          }
+        }
+
+        n = (3 * x * x) - (y * y);
+        if (x > y && n <= limite) {
+          // Verificar si el residuo cuadrático cumple con las condiciones para ser primo
+          if (n % 12 == 11) {
+            #pragma omp critical
+            esPrimo[n] = !esPrimo[n];
+          }
+        }
+      }
+    }
+
+    #pragma omp for nowait // Permitir que otros hilos continúen sin bloqueo
+    // Verificar los números primos según el paso de la Criba de Atkin
+    for (int n = 5; n <= raizLimite; ++n) {
+      if (esPrimo[n]) {
+        int x = n * n;
+        for (int k = x; k <= limite; k += x) {
+          #pragma omp critical
+          esPrimo[k] = false;
+        }
+      }
+    }
+  }
+
+  // Devolver el vector que indica si cada número es primo o no
+  return esPrimo;
+}
+```
