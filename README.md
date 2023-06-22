@@ -280,7 +280,7 @@ múltiples cálculos matemáticos.
 
 Tomando como referencia la siguiente imagen se realizaron comparaciones en los algoritmos para ver su comportamiento grafico.
 
-![bigO](images/BigO.png)
+![bigO](images/bigO.png)
 
 Utilizando esto, implementamos las siguientes funciones tomando como referencia O(n). En este caso N(x).
 
