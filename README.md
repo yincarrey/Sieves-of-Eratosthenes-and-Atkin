@@ -296,7 +296,7 @@ Por otro lado, se observa que la criba de Atkin tiene una complejidad O(N/log(lo
 con respecto al tamaño del rango. Aunque es un algoritmo eficiente, se puede apreciar que su rendimiento es inferior al de la criba de Eratóstenes y O(n), 
 especialmente cuando se trabaja con un rango de 500 millones de elementos.
 
-![comparacion_final](images/comparacion_final.png)
+![comparacion_final](images/comparacion_final.PNG)
 
 En el nuevo gráfico presentado, se destaca un punto de inflexión en (1x10^10, 1x10^10), donde se observa un cambio en el rendimiento relativo de la criba de Atkin
 en comparación con la criba de Eratóstenes.
