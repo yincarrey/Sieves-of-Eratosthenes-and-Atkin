@@ -285,6 +285,7 @@ Tomando como referencia la siguiente imagen se realizaron comparaciones en los a
 Utilizando esto, implementamos las siguientes funciones tomando como referencia O(n). En este caso N(x).
 
 ![funciones](images/funciones.png)
+
 ![comparacion_inicial](images/comparaciongrafica_inicial.png)
 
 En el contexto del gráfico mostrado, se puede observar el rendimiento de dos algoritmos de criba: la criba de Eratóstenes y la criba de Atkin. Los datos
