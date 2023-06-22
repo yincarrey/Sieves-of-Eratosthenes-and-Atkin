@@ -61,7 +61,7 @@ Sí se desea indagar mas sobre el tema puede optar por revisar [sieve of eratost
 
 ### Criba de Atkin
 
-La Criba de Atkin, propuesta por A. O. L. Atkin y Daniel J. Bernstein en 2004, es un algoritmo avanzado diseñado para encontrar números primos hasta un límite dado de manera 
+La [Criba de Atkin](https://iq.opengenus.org/sieve-of-atkin/), propuesta por A. O. L. Atkin y Daniel J. Bernstein en 2004, es un algoritmo avanzado diseñado para encontrar números primos hasta un límite dado de manera 
 más eficiente que la Criba de Eratóstenes convencional. Esta técnica se basa en el [teorema de los residuos cuadráticos](http://enciclopedia.us.es/index.php/Resto_cuadr%C3%A1tico) y emplea operaciones matemáticas para determinar qué 
 números son primos y cuáles son compuestos.
 
@@ -92,7 +92,8 @@ Suponiendo que se tienen que encontrar los numeros primos con N = 200 utilizando
       * Si los valores resultantes cumplen con las condiciones requeridas, marcamos los números correspondientes en el arreglo como primos.
 4. Continuamos iterando sobre los demás valores de x, realizando el mismo proceso para cada combinación de x e y que cumpla con la condición x^2 + y^2 ≤ 200.
 
-Al finalizar el proceso de iteración, revisamos los elementos del arreglo. Los números marcados como primos son los números primos encontrados hasta el límite de 200.
+Al finalizar el proceso de iteración, revisamos los elementos del arreglo. Los números marcados como primos son los números primos encontrados hasta el límite de 200. 
+Adicionalmente se puede revisar la siguiente documentacion en donde se realizan discusiones respecto a este tema [geeksforgeeks]([https://cp-algorithms.com/algebra/sieve-of-eratosthenes.html](https://www.geeksforgeeks.org/sieve-of-atkin/)).
 
 ![Numeros primos con n = 100](images/primos200.png)
 
