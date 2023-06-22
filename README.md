@@ -285,9 +285,6 @@ Tomando como referencia la siguiente imagen se realizaron comparaciones en los a
 Utilizando esto, implementamos las siguientes funciones tomando como referencia O(n). En este caso N(x).
 
 ![funciones](images/funciones.png)
-.
-.
-.
 ![comparacion_inicial](images/comparaciongrafica_inicial.png)
 
 En el contexto del gráfico mostrado, se puede observar el rendimiento de dos algoritmos de criba: la criba de Eratóstenes y la criba de Atkin. Los datos
@@ -307,6 +304,10 @@ en comparación con la criba de Eratóstenes.
 
 En ese punto, la criba de Atkin, con una complejidad O(N/log(log(n))), logra superar a la criba de Eratóstenes en eficiencia. Este cambio en el rendimiento relativo 
 sugiere que, a partir del punto de inflexión, la criba de Atkin se vuelve una opción más eficiente en términos de tiempo de ejecución para rangos más grandes.
+
+Por el lado de resultados, se obtuvieron resultados un tanto llamativos para. Esto dado que el tiempo de ejecucion con la implementacio'n paralela daba como resultado
+que la Criba de Atkin era mas veloz en un rango de 500 millones.
+ 
 
 ## Compilación y ejecución
 
