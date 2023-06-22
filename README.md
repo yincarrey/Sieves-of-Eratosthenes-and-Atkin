@@ -320,7 +320,7 @@ Eratostenes:
 
 Atkin:
 
-![tpoAtkin](images/atkin.PNG)
+![tpoAtkin](images/aktin.PNG)
 
 Durante las pruebas realizadas, se consideró únicamente la ejecución de los algoritmos sin incluir impresiones adicionales que pudieran afectar los 
 resultados. Aunque los resultados obtenidos fueron similares con impresiones de numeros, con la distinción en que esta requeria un alto consumo de CPU.
