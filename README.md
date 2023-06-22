@@ -243,6 +243,67 @@ std::vector<bool> cribaAtkin(int limite) {
 
 ## Complejidad temporal Big O
 
+La complejidad temporal Big O nos permite evaluar el desempeño de los algoritmos en relación con el tamaño del problema. En el caso de 
+las cribas de Atkin y Eratóstenes, son algoritmos eficientes utilizados para encontrar números primos dentro de un rango determinado.
+
+En este apartado, presentaremos información relevante sobre estas cribas, incluyendo los datos recopilados y los resultados obtenidos. 
+Analizaremos la complejidad temporal de cada algoritmo, lo cual nos proporcionará una idea clara de su eficiencia y rendimiento. 
+
+### Criba de Eratóstenes
+
+La criba de Eratóstenes es ampliamente reconocida por su eficiencia en la búsqueda de números primos. Su complejidad temporal se estima 
+como una progresión armónica de números primos. Lo que se puede apreciar en la siguiente imagen:
+
+![progresion eratostenes](images/serie_eratostenes.png)
+
+En consecuencia, a medida en que el tamaño del rango en el que se buscan los números primos aumenta, la complejidad de la criba de Eratóstenes 
+se aproxima a O(n log(log(n))). Esto implica que el tiempo de ejecución del algoritmo crece de manera logarítmica en relación con el tamaño 
+del rango.
+
+### Criba de Atkin
+
+La criba de Atkin, en su versión modificada, es otro algoritmo eficiente utilizado para encontrar números primos en un rango dado. A diferencia 
+de la criba de Eratóstenes, se basa en el teorema de los residuos para determinar qué números son potencialmente primos.
+
+En este enfoque, se utiliza una fórmula específica, como por ejemplo, 4x^2 + y^2, que genera una secuencia de números. Al evaluar esta fórmula 
+para diferentes valores de "x" e "y", se determina si un número es candidato a ser primo o no.
+
+La versión modificada de la criba de Atkin puede reducir el uso de memoria al realizar las mismas operaciones que la versión original. Esto se 
+traduce en una complejidad temporal de O(n/log(log(n))), donde "n" es el límite superior del rango en el que se buscan los números primos.
+
+Sin embargo, es importante tener en cuenta que la criba de Atkin puede generar una carga de CPU significativa, especialmente cuando se trabaja 
+con rangos muy grandes. Esto se debe a que el algoritmo requiere evaluar la fórmula específica en cada número del rango, lo que implica realizar
+múltiples cálculos matemáticos.
+
+### Graficos y resultados encontrados
+
+Tomando como referencia la siguiente imagen se realizaron comparaciones en los algoritmos para ver su comportamiento grafico.
+
+![bigO](images/BigO.png)
+
+Utilizando esto, implementamos las siguientes funciones tomando como referencia O(n). En este caso N(x).
+
+![funciones](images/funciones.png)
+![comparacion_inicial](images/comparaciongrafica_inicial.png)
+
+En el contexto del gráfico mostrado, se puede observar el rendimiento de dos algoritmos de criba: la criba de Eratóstenes y la criba de Atkin. Los datos
+representados abarcan un rango de 500 millones de elementos.
+
+El análisis del gráfico revela que la criba de Eratóstenes presenta el comportamiento más eficiente en términos de complejidad temporal. Luego, la sigue la
+complejidad O(n), lo que significa que el tiempo de ejecución crece linealmente con el tamaño del rango de números primos buscados.
+
+Por otro lado, se observa que la criba de Atkin tiene una complejidad O(N/log(log(n))), lo que implica que su tiempo de ejecución aumenta de manera logarítmica
+con respecto al tamaño del rango. Aunque es un algoritmo eficiente, se puede apreciar que su rendimiento es inferior al de la criba de Eratóstenes y O(n), 
+especialmente cuando se trabaja con un rango de 500 millones de elementos.
+
+![comparacion_final](images/comparacion_final.png)
+
+En el nuevo gráfico presentado, se destaca un punto de inflexión en (1x10^10, 1x10^10), donde se observa un cambio en el rendimiento relativo de la criba de Atkin
+en comparación con la criba de Eratóstenes.
+
+En ese punto, la criba de Atkin, con una complejidad O(N/log(log(n))), logra superar a la criba de Eratóstenes en eficiencia. Este cambio en el rendimiento relativo 
+sugiere que, a partir del punto de inflexión, la criba de Atkin se vuelve una opción más eficiente en términos de tiempo de ejecución para rangos más grandes.
+
 ## Compilación y ejecución
 
 Respecto a la compilación y ejecución del programa se puede realizar de dos formas: 
