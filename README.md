@@ -1,5 +1,14 @@
 # Algoritmos para la Determinación de Números Primos
 
+## Índice
+
+1. [Descripción](#Descripción)
+2. [Algoritmos para determinar números primos](#Algoritmos-para-determinar-números-primos)
+3. [Implementación en C++ utilizando OpenMP](#Implementación-en-C++-utilizando-OpenMP)
+4. [Complejidad temporal Big O](#Complejidad-temporal-Big-O)
+5. [Graficos y resultados encontrados](#Graficos-y-resultados-encontrados)
+6. [Compilación y ejecución](#Compilación-y-ejecución)
+
 ## Descripción
 
 Este proyecto se centra en abordar la problemática de determinar los números primos en conjuntos de datos de gran magnitud. Para ello, se realizó una investigación que 
@@ -276,7 +285,7 @@ Sin embargo, es importante tener en cuenta que la criba de Atkin puede generar u
 con rangos muy grandes. Esto se debe a que el algoritmo requiere evaluar la fórmula específica en cada número del rango, lo que implica realizar
 múltiples cálculos matemáticos.
 
-### Graficos y resultados encontrados
+## Graficos y resultados encontrados
 
 Tomando como referencia la siguiente imagen se realizaron comparaciones en los algoritmos para ver su comportamiento grafico.
 
