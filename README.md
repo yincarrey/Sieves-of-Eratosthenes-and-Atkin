@@ -293,21 +293,64 @@ representados abarcan un rango de 500 millones de elementos.
 El análisis del gráfico revela que la criba de Eratóstenes presenta el comportamiento más eficiente en términos de complejidad temporal. Luego, la sigue la
 complejidad O(n), lo que significa que el tiempo de ejecución crece linealmente con el tamaño del rango de números primos buscados.
 
-Por otro lado, se observa que la criba de Atkin tiene una complejidad O(N/log(log(n))), lo que implica que su tiempo de ejecución aumenta de manera logarítmica
-con respecto al tamaño del rango. Aunque es un algoritmo eficiente, se puede apreciar que su rendimiento es inferior al de la criba de Eratóstenes y O(n), 
-especialmente cuando se trabaja con un rango de 500 millones de elementos.
+Por otro lado, se observa que la criba de Atkin tiene una complejidad O(N/log(log(n))), lo que implica que su tiempo de ejecución aumenta de manera 
+logarítmica con respecto al tamaño del rango. Aunque es un algoritmo eficiente, se puede apreciar que su rendimiento es inferior al de la criba de 
+Eratóstenes y O(n), especialmente cuando se trabaja con un rango de 500 millones de elementos.
 
 ![comparacion_final](images/comparacion_final.PNG)
 
-En el nuevo gráfico presentado, se destaca un punto de inflexión en (1x10^10, 1x10^10), donde se observa un cambio en el rendimiento relativo de la criba de Atkin
-en comparación con la criba de Eratóstenes.
+En el nuevo gráfico presentado, se destaca un punto de inflexión en (1x10^10, 1x10^10), donde se observa un cambio en el rendimiento relativo de la Criba
+de Atkin en comparación con la criba de Eratóstenes.
 
-En ese punto, la criba de Atkin, con una complejidad O(N/log(log(n))), logra superar a la criba de Eratóstenes en eficiencia. Este cambio en el rendimiento relativo 
-sugiere que, a partir del punto de inflexión, la criba de Atkin se vuelve una opción más eficiente en términos de tiempo de ejecución para rangos más grandes.
+En ese punto, la criba de Atkin, con una complejidad O(N/log(log(n))), logra superar a la Criba de Eratóstenes en eficiencia. Este cambio en el rendimiento 
+relativo sugiere que, a partir del punto de inflexión, la criba de Atkin se vuelve una opción más eficiente en términos de tiempo de ejecución para rangos 
+más grandes.
 
-Por el lado de resultados, se obtuvieron resultados un tanto llamativos para. Esto dado que el tiempo de ejecucion con la implementacio'n paralela daba como resultado
-que la Criba de Atkin era mas veloz en un rango de 500 millones.
- 
+Por otro lado, se realizaron pruebas de tiempo de ejecución con implementaciones paralelas de la Criba de Atkin y la Criba de Eratóstenes en un rango de 500
+millones de números. Los resultados fueron sorprendentes, ya que la Criba de Atkin demostró ser más rápida que la Criba de Eratóstenes en este rango específico.
+
+Esto indica que, en ciertas circunstancias y con una implementación paralela adecuada, la Criba de Atkin puede ofrecer un mejor rendimiento en términos de tiempo
+de ejecución en comparación con la Criba de Eratóstenes. Sin embargo, es importante tener en cuenta que estos resultados pueden variar según el entorno de 
+ejecución, el hardware utilizado y otros factores específicos de la implementación.
+
+Eratostenes:
+
+![tpoEratostenes](images/eratostenes.PNG)
+
+Atkin:
+
+![tpoAtkin](images/atkin.PNG)
+
+Durante las pruebas realizadas, se consideró únicamente la ejecución de los algoritmos sin incluir impresiones adicionales que pudieran afectar los 
+resultados. Aunque los resultados obtenidos fueron similares con impresiones de numeros, con la distinción en que esta requeria un alto consumo de CPU.
+
+Durante las pruebas, se evaluó el consumo de CPU de las implementaciones de la Criba de Atkin y la Criba de Eratóstenes. Los resultados confirmaron las 
+expectativas, ya que la implementación de Atkin, al realizar más cálculos matemáticos, presentó un consumo ligeramente mayor de CPU en comparación con 
+la implementación de Eratóstenes.
+
+Esto indica que la Criba de Atkin, debido a su naturaleza algorítmica y los cálculos adicionales involucrados, puede requerir más recursos de CPU en 
+comparación con la Criba de Eratóstenes.
+
+Eratostenes:
+
+![csmoEratostenes](images/consumoeratostenes.PNG)
+
+Atkin:
+
+![csmoAtkin](images/consumoatkin.PNG)
+
+En conclusión, durante las pruebas realizadas, se obtuvieron resultados interesantes en cuanto a la eficiencia de la Criba de Atkin y la Criba de Eratóstenes.
+
+En términos de tiempo de ejecución, se observó que la implementación paralela de la Criba de Atkin superó a la Criba de Eratóstenes en un rango de 500 millones 
+de datos, lo que indica que la Criba de Atkin fue más eficiente en términos de velocidad en esta situación específica.
+
+Por otro lado, en cuanto al consumo de CPU, se encontró que la implementación de la Criba de Atkin mostró un consumo ligeramente mayor debido a los cálculos 
+matemáticos adicionales que realiza en comparación con la Criba de Eratóstenes.
+
+En consecuencia de los resultados obtenidos en las pruebas, se decidió seleccionar el algoritmo de la Criba de Atkin para la implementación del proyecto. 
+La mayor eficiencia en tiempo de ejecución observada en un rango de 500 millones de datos, combinada con resultados satisfactorios en ambos casos, respaldó
+la elección de la Criba de Atkin como la opción preferida. Además, se consideró que el consumo ligeramente mayor de CPU en la implementación de Atkin era 
+aceptable en relación con los beneficios obtenidos en términos de velocidad.
 
 ## Compilación y ejecución
 
