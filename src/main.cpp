@@ -17,9 +17,9 @@ int main() {
 
     // Calcular los números primos de forma paralela
     //criba de Atkin
-    std::vector<int> primos = obtenerPrimos(cribaAtkin(limite), limite);
-    /* //criba de Eratostenes (opcional)
-    std::vector<int> primos = obtenerPrimos(cribaDeEratostenes(limite), limite); */
+    /* std::vector<int> primos = obtenerPrimos(cribaAtkin(limite), limite); */
+    //criba de Eratostenes (opcional)
+    std::vector<int> primos = obtenerPrimos(cribaDeEratostenes(limite), limite);
 
     // Mostrar los números primos
     mostrarPrimos(primos);
