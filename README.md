@@ -307,6 +307,8 @@ En ese punto, la criba de Atkin, con una complejidad O(N/log(log(n))), logra sup
 relativo sugiere que, a partir del punto de inflexión, la criba de Atkin se vuelve una opción más eficiente en términos de tiempo de ejecución para rangos 
 más grandes.
 
+#### Pruebas
+
 Por otro lado, se realizaron pruebas de tiempo de ejecución con implementaciones paralelas de la Criba de Atkin y la Criba de Eratóstenes en un rango de 500
 millones de números. Los resultados fueron sorprendentes, ya que la Criba de Atkin demostró ser más rápida que la Criba de Eratóstenes en este rango específico.
 
