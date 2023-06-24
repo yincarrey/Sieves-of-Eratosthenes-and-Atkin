@@ -4,7 +4,7 @@
 
 1. [Descripción](#Descripción)
 2. [Algoritmos para determinar números primos](#Algoritmos-para-determinar-números-primos)
-3. [Implementación en C++ utilizando OpenMP](#Implementacion-en-C++-utilizando-OpenMP)
+3. [Implementación en C++ utilizando OpenMP](#Implementación-en-C++-utilizando-OpenMP)
 4. [Complejidad temporal Big O](#Complejidad-temporal-Big-O)
 5. [Graficos y resultados encontrados](#Graficos-y-resultados-encontrados)
 6. [Compilación y ejecución](#Compilación-y-ejecución)
@@ -109,7 +109,7 @@ Adicionalmente se puede revisar la siguiente documentacion en donde se realizan 
 En este ejemplo, los números primos encontrados mediante la Criba de Atkin con n = 200 son: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 
 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197 y 199.
 
-## Implementacion en C++ utilizando OpenMP
+## Implementación en C++ utilizando OpenMP
 
 A continuación, se realizará la implementación en C++ utilizando OpenMP de los algoritmos revisados anteriormente. Para ello, antes de comenzar con la implementación, es esencial
 verificar que se cumplan los requisitos mínimos. Asegúrate de tener en cuenta lo siguiente:
